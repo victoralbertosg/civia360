@@ -1,67 +1,67 @@
-CONSTRUCTION PERMITS AND LICENSES - MUNICIPAL GUIDE
-=====================================================
+LICENCIAS DE CONSTRUCCIÓN – GUÍA MUNICIPAL
+==========================================
 
-PROCEDURE TO OBTAIN A CONSTRUCTION LICENSE
+PROCEDIMIENTO PARA SOLICITAR UNA LICENCIA DE CONSTRUCCIÓN
 
-A construction license is the official document that authorizes individuals or companies
-to build, expand, modify, repair, or demolish any property within the municipality.
-Building without this document is illegal and subject to penalties.
+La licencia de construcción es el documento oficial que autoriza a personas físicas o morales
+a edificar, ampliar, modificar, reparar o demoler cualquier inmueble dentro del territorio
+municipal. Sin este documento, toda obra se considera ilegal y puede ser sancionada.
 
-STEP 1 - SUBMIT APPLICATION AT THE OFFICE
-The property owner or legal representative must visit the Urban Development Office (DDU)
-at Av. Hidalgo No. 100, Ground Floor, and submit the official application form
-filled in block letters.
+PASO 1 – PRESENTAR SOLICITUD EN VENTANILLA
+El propietario o su representante legal debe acudir a la Dirección de Desarrollo Urbano (DDU)
+ubicada en Av. Hidalgo No. 100, Planta Baja, y presentar la solicitud oficial debidamente
+llenada con letra de molde.
 
-STEP 2 - REQUIRED DOCUMENTS
-The following documents must be presented in original and copy:
-  1. Property deed registered with the Public Property Registry.
-  2. Valid official identification of the owner (national ID, passport, or professional ID).
-  3. Architectural plans signed by a certified Project Manager (DRO) with a valid license.
-  4. Plumbing and electrical installation plans.
-  5. Structural design and calculation report for constructions larger than 60 sqm.
-  6. Proof of property tax payment up to date.
-  7. Land use permit issued by the DDU (valid for 6 months).
-  8. Receipt for payment of municipal fees corresponding to the type of work.
+PASO 2 – DOCUMENTOS REQUERIDOS
+Para iniciar el trámite se deben presentar los siguientes documentos en original y copia:
+  1. Escritura pública del inmueble debidamente inscrita en el Registro Público de la Propiedad.
+  2. Identificación oficial vigente del propietario (INE, pasaporte o cédula profesional).
+  3. Planos arquitectónicos firmados por Director Responsable de Obra (DRO) con cédula vigente.
+  4. Planos de instalaciones hidrosanitarias y eléctricas.
+  5. Memoria descriptiva y de cálculo estructural para obras mayores a 60 m².
+  6. Comprobante de pago de predial al corriente.
+  7. Factibilidad de uso de suelo emitida por la DDU (vigencia 6 meses).
+  8. Comprobante de pago de derechos municipales correspondiente al tipo de obra.
 
-STEP 3 - TECHNICAL REVIEW AND APPROVAL
-The DDU technical staff will review the documentation within a maximum of 15 business days.
-If inconsistencies are found, the applicant will be notified in writing and given
-5 additional business days to correct them.
+PASO 3 – REVISIÓN Y DICTAMEN TÉCNICO
+El personal técnico de la DDU revisará la documentación en un plazo máximo de 15 días hábiles.
+Si se detectan inconsistencias, se notificará por escrito al solicitante para subsanarlas
+en un plazo de 5 días hábiles adicionales.
 
-STEP 4 - FEE PAYMENT
-Once the technical review is approved, the applicant will receive a payment order.
-Fees are calculated based on the value of the construction according to the current schedule:
-  - New residential construction: 1.5% of the construction value.
-  - Extension: 1.0% of the construction value.
-  - Remodeling: 0.8% of the construction value.
-  - Demolition: flat fee of $500 plus $5 per sqm.
+PASO 4 – PAGO DE DERECHOS
+Una vez aprobado el dictamen técnico, el solicitante recibirá una orden de pago.
+Los derechos se calculan sobre el valor de la obra según la tabla de aranceles vigente:
+  - Obra nueva habitacional: 1.5% del valor de la obra.
+  - Ampliación: 1.0% del valor de la obra.
+  - Remodelación: 0.8% del valor de la obra.
+  - Demolición: cuota fija de $500 pesos más $5 por m².
 
-STEP 5 - LICENSE ISSUANCE
-After payment, the license is issued within 3 business days.
-The license is valid for 12 months, extendable for 6 additional months
-upon request and payment of extension fees.
+PASO 5 – ENTREGA DE LICENCIA
+Realizado el pago, la licencia se expide en un plazo no mayor a 3 días hábiles.
+El documento tiene una vigencia de 12 meses, prorrogables por 6 meses adicionales
+previa solicitud y pago de derechos de prórroga.
 
-OBLIGATIONS DURING CONSTRUCTION
-- The license must be displayed visibly at the construction site at all times.
-- The certified Project Manager must conduct weekly supervision visits
-  and sign the site logbook at least once a week.
-- Any changes to the original project must be reported to the DDU and processed
-  as a license modification before execution.
-- Upon completion, the owner must request a Certificate of Work Completion
-  to regularize the property.
+VIGENCIA Y OBLIGACIONES DURANTE LA OBRA
+- La licencia debe exhibirse en un lugar visible de la obra durante toda su ejecución.
+- El Director Responsable de Obra (DRO) debe realizar visitas de supervisión y firmar
+  la bitácora de obra al menos una vez por semana.
+- Cualquier modificación al proyecto original debe notificarse a la DDU y tramitarse
+  como modificación de licencia antes de ejecutarse.
+- Al concluir la obra, el propietario debe solicitar el Acta de Terminación de Obra
+  para regularizar el inmueble.
 
-PENALTIES FOR BUILDING WITHOUT A LICENSE
-Building without a license or failing to comply with its conditions may result in:
-  - Fines ranging from 50 to 500 Units of Measure and Update (UMA).
-  - Immediate suspension of construction work.
-  - Demolition of the unauthorized structure at the owner's expense.
-  - Disqualification from obtaining licenses for 2 years.
+SANCIONES POR CONSTRUIR SIN LICENCIA
+Construir sin licencia o incumplir sus condiciones puede resultar en:
+  - Multa de 50 a 500 Unidades de Medida y Actualización (UMA) vigentes.
+  - Suspensión inmediata de la obra.
+  - Demolición de lo construido a costa del propietario.
+  - Inhabilitación para obtener licencias por un período de 2 años.
 
-OFFICE HOURS
-Monday to Friday, 8:00 AM to 3:00 PM.
-Contact phone: 800-123-4567 ext. 201
-Email: ddu@municipio.gob.mx
+HORARIO DE ATENCIÓN
+Lunes a viernes de 8:00 a 15:00 horas.
+Teléfono de contacto: 800-123-4567 ext. 201
+Correo electrónico: ddu@municipio.gob.mx
 
-TOTAL PROCESSING TIME
-The complete process, when documentation is complete and correct, takes between
-20 and 25 business days from submission to license delivery.
+TIEMPO TOTAL DEL TRÁMITE
+El proceso completo, cuando la documentación está completa y correcta, tarda entre
+20 y 25 días hábiles desde la presentación de la solicitud hasta la entrega de la licencia.

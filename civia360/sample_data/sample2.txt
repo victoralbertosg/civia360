@@ -1,100 +1,96 @@
-PROPERTY TAX, CIVIL REGISTRY AND BUSINESS REGISTRATION - MUNICIPAL GUIDE
-=========================================================================
+IMPUESTO PREDIAL, REGISTRO CIVIL Y TRÁMITES MUNICIPALES
+========================================================
 
-SECTION 1 - PROPERTY TAX (IMPUESTO PREDIAL)
+SECCIÓN 1 – IMPUESTO PREDIAL
 
-Property tax is the annual contribution that all owners of real estate properties
-(houses, land, commercial premises) located in the municipality must pay.
+El impuesto predial es la contribución anual que deben pagar todos los propietarios
+de bienes inmuebles (casas, terrenos, locales comerciales) ubicados en el municipio.
 
-PAYMENT DEADLINES
-- January: 15% discount on the annual total (early payment).
-- February: 10% discount.
-- March through June: payment without discount and without surcharge.
-- July onwards: 2% monthly surcharge applied cumulatively.
+PLAZOS DE PAGO
+- Enero: descuento del 15% sobre el total anual (pago anticipado).
+- Febrero: descuento del 10%.
+- Marzo a junio: pago sin descuento y sin recargo.
+- Julio en adelante: recargo del 2% mensual acumulado.
 
-HOW TO PAY PROPERTY TAX
-Payment can be made through the following channels:
-  1. In person: Municipal Treasury, Av. Independencia No. 55,
-     Monday to Friday from 8:00 AM to 2:30 PM.
-  2. Online: Payment portal at www.municipio.gob.mx/predial
-     with credit or debit card (no extra charge).
-  3. Banks and convenience stores: using the payment reference issued by the Treasury.
+CÓMO PAGAR EL IMPUESTO PREDIAL
+El pago puede realizarse por los siguientes medios:
+  1. Presencial: Tesorería Municipal, Av. Independencia No. 55,
+     lunes a viernes de 8:00 a 14:30 horas.
+  2. En línea: Portal de pagos www.municipio.gob.mx/predial
+     con tarjeta de crédito o débito (sin costo adicional).
+  3. Bancos y tiendas de conveniencia: con la referencia de pago emitida por Tesorería.
 
-DOCUMENTS REQUIRED FOR PAYMENT
-  - Cadastral account number (found on previous receipts or property deeds).
-  - Official identification of the owner.
+DOCUMENTOS PARA EL PAGO
+  - Número de cuenta catastral (aparece en recibos anteriores o en escrituras).
+  - Identificación oficial del propietario.
 
-EXEMPTIONS AND SPECIAL DISCOUNTS
-  - Persons over 60 years old: 50% discount with valid INAPAM credential.
-  - Persons with disabilities: 50% discount with official medical certificate.
-  - Properties for social use (public schools, hospitals): exempt from payment.
+EXENCIONES Y DESCUENTOS ESPECIALES
+  - Personas mayores de 60 años: 50% de descuento presentando credencial INAPAM vigente.
+  - Personas con discapacidad: 50% de descuento con constancia médica oficial.
+  - Inmuebles de uso social (escuelas públicas, hospitales): exentos de pago.
 
-----------------------------------------------------------------------
+---
 
-SECTION 2 - CIVIL REGISTRY: BIRTH CERTIFICATE
+SECCIÓN 2 – ACTA DE NACIMIENTO
 
-The birth certificate is the official document that certifies the birth of a person
-and establishes their legal identity.
+El acta de nacimiento es el documento oficial que certifica el nacimiento de una persona
+y establece su identidad legal.
 
-HOW TO REQUEST A BIRTH CERTIFICATE
-  Visit the Civil Registry located at the Municipal Palace, Upper Floor,
-  with the following documents:
-    1. Official identification of the applicant.
-    2. CURP (unique population registry code) of the registered person, if available.
-    3. Proof of payment of fees ($50 pesos per certified copy).
+CÓMO SOLICITAR UN ACTA DE NACIMIENTO
+  Acuda al Registro Civil ubicado en Palacio Municipal, Planta Alta,
+  con los siguientes documentos:
+    1. Identificación oficial del solicitante.
+    2. CURP del registrado, si ya cuenta con ella.
+    3. Comprobante de pago de derechos ($50 pesos por copia certificada).
 
-The process is immediate when the birth was registered in this municipality.
-For births registered in other municipalities, a formal request must be submitted
-to the corresponding Civil Registry (estimated time: 10 business days).
+El trámite es inmediato cuando el nacimiento fue registrado en este municipio.
+Para nacimientos en otros municipios se solicita mediante oficio al Registro Civil
+correspondiente, con un plazo estimado de 10 días hábiles.
 
-----------------------------------------------------------------------
+---
 
-SECTION 3 - BUSINESS REGISTRATION
+SECCIÓN 3 – REGISTRO DE NEGOCIOS
 
-To register a business in the municipality the following documents must be submitted:
-  1. Business opening application form (available free at the DDU office).
-  2. Official identification of the owner or legal representative.
-  3. Articles of incorporation for legal entities (companies).
-  4. Proof of address of the business (electricity, water, or phone bill).
-  5. Land use certificate showing compatibility with the commercial activity.
-  6. Favorable civil protection assessment.
-  7. Structural safety certificate for premises larger than 100 sqm.
+Para registrar un negocio en el municipio se deben presentar los siguientes documentos:
+  1. Solicitud de apertura de establecimiento (formato gratuito en la DDU).
+  2. Identificación oficial del propietario o representante legal.
+  3. Acta constitutiva en caso de personas morales.
+  4. Comprobante de domicilio del negocio (recibo de luz, agua o teléfono).
+  5. Constancia de uso de suelo compatible con la actividad comercial.
+  6. Dictamen de protección civil favorable.
+  7. Constancia de seguridad estructural para locales de más de 100 m².
 
-Processing time is 10 business days.
-The permit is valid for 1 year and must be renewed annually.
+El plazo de resolución es de 10 días hábiles.
+El permiso de negocio tiene vigencia de 1 año y debe renovarse anualmente.
 
-----------------------------------------------------------------------
+---
 
-SECTION 4 - LAND USE REGULATIONS
+SECCIÓN 4 – USO DE SUELO
 
-RESIDENTIAL USE
-In areas zoned as H1 (single-family residential) the following are allowed:
-  - Single-family housing.
-  - Mixed-use offices on the ground floor (maximum 30% of the built area).
-  - Small neighborhood shops without storage of hazardous materials.
+USO RESIDENCIAL
+En zonas H1 (habitacional unifamiliar) se permite:
+  - Vivienda unifamiliar.
+  - Oficinas de uso mixto en planta baja (máximo 30% del área construida).
+  - Pequeños comercios de barrio sin almacenamiento de materiales peligrosos.
 
-In H2 zones (multi-family residential):
-  - Apartment buildings of up to 4 floors.
-  - Low-impact educational and health services.
+En zonas H2 (habitacional multifamiliar):
+  - Edificios de departamentos de hasta 4 niveles.
+  - Servicios educativos y de salud de bajo impacto.
 
-COMMERCIAL USE
-C1 zones (neighborhood commerce) allow:
-  - Grocery stores, stationery shops, pharmacies.
-  - Artisan workshops without noise or hazardous waste emissions.
+USO COMERCIAL
+Zonas C1 (comercio barrial) permiten: tiendas de abarrotes, papelerías, farmacias
+y talleres artesanales sin ruido ni residuos peligrosos.
 
-C2 zones (corridor commerce) allow:
-  - Supermarkets, department stores.
-  - Restaurants and entertainment services.
-  - Public parking lots.
+Zonas C2 (comercio de corredor) permiten: supermercados, tiendas departamentales,
+restaurantes, servicios de entretenimiento y estacionamientos públicos.
 
-INDUSTRIAL USE
-I1 zones (light industry) allow low environmental impact manufacturing.
-I2 zones (heavy industry) require an Environmental Impact Assessment (EIA)
-approved by the State Ministry of Environment.
+USO INDUSTRIAL
+Las zonas I1 (industria ligera) permiten manufactura de bajo impacto ambiental.
+Las zonas I2 (industria pesada) requieren Manifestación de Impacto Ambiental (MIA)
+aprobada por la Secretaría de Medio Ambiente Estatal.
 
-GENERAL RESTRICTIONS IN RESIDENTIAL AREAS
-  - Warehouses, auto repair shops, and gas depots are not allowed.
-  - Buildings must not exceed the height established in the Urban Development Plan (UDP):
-    maximum 3 floors in H1 and 5 floors in H2 zones.
-  - Minimum open area in residential lots is 20% of the total land area.
-  - Parking must comply with 1 space per every 80 sqm of built area.
+RESTRICCIONES EN ZONAS RESIDENCIALES
+  - No se permiten bodegas, talleres mecánicos ni depósitos de gas.
+  - Altura máxima: 3 niveles en H1 y 5 niveles en H2.
+  - Área libre mínima: 20% del terreno.
+  - Estacionamiento obligatorio: 1 cajón por cada 80 m² construidos.
