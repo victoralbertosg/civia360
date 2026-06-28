@@ -1,0 +1,5 @@
+Este documento es un ejemplo de texto para probar la demo de CIVIA 360.
+
+Contiene información ficticia sobre normas municipales, procedimientos y ejemplos de preguntas que el modelo puede responder.
+
+Pregunta de ejemplo: ¿Cuál es el procedimiento para solicitar una licencia de construcción?

@@ -3,14 +3,16 @@ from pathlib import Path
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, pipeline
+from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 # ---- Configuración de modelos pequeños ----
 embed_model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 gen_model_name = 'google/flan-t5-small'
 tokenizer = AutoTokenizer.from_pretrained(gen_model_name)
 generator = AutoModelForSeq2SeqLM.from_pretrained(gen_model_name)
-gen_pipe = pipeline('text2text-generation', model=generator, tokenizer=tokenizer, max_length=200)
+
+
+
 
 # ---- Funciones de indexado ----
 INDEX_DIR = Path('faiss_index')
@@ -37,7 +39,9 @@ def retrieve(query, k=5):
 
 def generate_answer(context, query):
     prompt = f"Context: {context}\n\nQuestion: {query}\n\nAnswer:"
-    output = gen_pipe(prompt)[0]['generated_text']
+    inputs = tokenizer(prompt, return_tensors="pt", truncation=True, max_length=512)
+    output_ids = generator.generate(**inputs, max_length=200)
+    output = tokenizer.decode(output_ids[0], skip_special_tokens=True)
     return output
 
 st.title('Demo CIVIA 360 – RAG con modelos pequeños')
@@ -46,6 +50,11 @@ if uploaded:
     add_documents(uploaded)
     st.success('Documentos indexados')
 
+if st.button('Cargar datos de ejemplo'):
+    example_dir = Path('sample_data')
+    example_files = [f for f in example_dir.iterdir() if f.suffix in ['.txt', '.md']]
+    add_documents(example_files)
+    st.success('Datos de ejemplo cargados')
 query = st.text_input('Pregunta')
 if query and len(texts) > 0:
     topk = st.slider('Número de fragmentos', 1, 10, 5)
