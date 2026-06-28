@@ -23,7 +23,12 @@ texts = []  # lista de textos completos
 
 def add_documents(files):
     for f in files:
-        content = f.read().decode('utf-8')
+        # Support both Streamlit uploaded files (have .read()) and local Path objects
+        if hasattr(f, "read"):
+            content = f.read().decode('utf-8')
+        else:
+            # Assume f is a pathlib.Path or string path
+            content = Path(f).read_text(encoding='utf-8')
         # dividir en fragmentos simples de 200 palabras
         chunks = [content[i:i+1000] for i in range(0, len(content), 1000)]
         for chunk in chunks:
