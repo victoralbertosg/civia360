@@ -3,27 +3,28 @@ from pathlib import Path
 import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
-from transformers import pipeline
+from transformers import AutoModelForQuestionAnswering, AutoTokenizer
+import torch
 
 st.set_page_config(page_title="CIVIA 360", page_icon="🏛️", layout="centered")
 
 # ── Modelos cacheados ────────────────────────────────────────────────────────
 @st.cache_resource(show_spinner="⏳ Cargando modelos de IA (primera vez puede tardar 1-2 min)…")
 def load_models():
-    # Embeddings multilingüe (soporta español e inglés)
+    # Embeddings multilingüe para búsqueda semántica en español
     embed = SentenceTransformer('sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2')
     dim = embed.get_sentence_embedding_dimension()
     idx = faiss.IndexFlatL2(dim)
 
-    # QA extractivo multilingüe — extrae respuestas directas del contexto en español
-    qa = pipeline(
-        "question-answering",
-        model="deepset/xlm-roberta-base-squad2",
-        tokenizer="deepset/xlm-roberta-base-squad2",
-    )
-    return embed, idx, qa
+    # QA extractivo multilingüe — SIN usar pipeline()
+    model_name = "deepset/xlm-roberta-base-squad2"
+    tok = AutoTokenizer.from_pretrained(model_name)
+    qa_model = AutoModelForQuestionAnswering.from_pretrained(model_name)
+    qa_model.eval()
 
-embed_model, index, qa_pipeline = load_models()
+    return embed, idx, tok, qa_model
+
+embed_model, index, qa_tokenizer, qa_model = load_models()
 
 # ── Estado persistente ───────────────────────────────────────────────────────
 if "texts" not in st.session_state:
@@ -31,13 +32,16 @@ if "texts" not in st.session_state:
 
 # ── Funciones ────────────────────────────────────────────────────────────────
 def index_chunks(content: str):
-    """Divide el texto en fragmentos y los indexa en FAISS."""
-    chunks = [content[i:i+600] for i in range(0, len(content), 500)]
-    for chunk in chunks:
+    """Divide texto en fragmentos solapados y los indexa en FAISS."""
+    size, overlap = 500, 100
+    start = 0
+    while start < len(content):
+        chunk = content[start:start + size]
         if chunk.strip():
             emb = embed_model.encode(chunk)
             index.add(np.array([emb], dtype='float32'))
             st.session_state.texts.append(chunk)
+        start += size - overlap
 
 def add_uploaded_files(files):
     for f in files:
@@ -55,7 +59,7 @@ def load_sample_data():
     return loaded
 
 def retrieve(query: str, k: int = 5):
-    """Recupera los k fragmentos más similares a la pregunta."""
+    """Recupera los k fragmentos más similares semánticamente."""
     q_emb = embed_model.encode(query)
     n = len(st.session_state.texts)
     if n == 0:
@@ -64,14 +68,46 @@ def retrieve(query: str, k: int = 5):
     D, I = index.search(np.array([q_emb], dtype='float32'), k)
     return [(st.session_state.texts[i], float(D[0][j])) for j, i in enumerate(I[0]) if i < n]
 
-def answer_question(context: str, question: str):
+def answer_question(context: str, question: str) -> dict:
     """
-    Usa el modelo extractivo para encontrar la respuesta exacta en el contexto.
-    Devuelve dict con 'answer', 'score', 'start', 'end'.
+    QA extractivo manual sin pipeline().
+    Devuelve {'answer': str, 'score': float}.
     """
     try:
-        result = qa_pipeline(question=question, context=context, max_answer_len=300)
-        return result
+        inputs = qa_tokenizer(
+            question,
+            context,
+            return_tensors="pt",
+            truncation=True,
+            max_length=512,
+            stride=128,
+            return_overflowing_tokens=False,
+            padding=True,
+        )
+        with torch.no_grad():
+            outputs = qa_model(**inputs)
+
+        start_logits = outputs.start_logits[0]
+        end_logits   = outputs.end_logits[0]
+
+        # Obtener los índices con mayor puntuación
+        start_idx = int(torch.argmax(start_logits))
+        end_idx   = int(torch.argmax(end_logits)) + 1
+
+        # Asegurar orden correcto
+        if end_idx <= start_idx:
+            end_idx = start_idx + 1
+
+        input_ids = inputs["input_ids"][0]
+        answer_tokens = input_ids[start_idx:end_idx]
+        answer = qa_tokenizer.decode(answer_tokens, skip_special_tokens=True).strip()
+
+        # Score combinado normalizado
+        s_score = float(torch.softmax(start_logits, dim=-1)[start_idx])
+        e_score = float(torch.softmax(end_logits,   dim=-1)[end_idx - 1])
+        score   = (s_score + e_score) / 2.0
+
+        return {"answer": answer, "score": score}
     except Exception as e:
         return {"answer": "", "score": 0.0}
 
@@ -107,7 +143,7 @@ n_docs = len(st.session_state.texts)
 if n_docs > 0:
     st.info(f"📚 Base de conocimiento activa: **{n_docs} fragmentos** indexados")
 else:
-    st.warning("⚠️ Sin documentos. Usa el botón **Datos de ejemplo** o sube archivos .txt / .md")
+    st.warning("⚠️ Sin documentos. Usa **Datos de ejemplo** o sube archivos .txt / .md")
 
 st.divider()
 
@@ -124,30 +160,23 @@ if query:
         topk = st.slider("Fragmentos de contexto a revisar", 1, min(10, n_docs), min(5, n_docs))
 
         with st.spinner("🔎 Buscando y extrayendo respuesta…"):
-            # 1. Recuperar fragmentos relevantes
-            results = retrieve(query, k=topk)
+            results  = retrieve(query, k=topk)
             if not results:
                 st.error("No se encontraron fragmentos relevantes.")
-            else:
-                # 2. Concatenar contexto y buscar la respuesta
-                context = "\n\n".join([r[0] for r in results])
-                result = answer_question(context, query)
-                answer = result.get("answer", "").strip()
-                score  = result.get("score", 0.0)
+                st.stop()
+            context  = "\n\n".join([r[0] for r in results])
+            result   = answer_question(context, query)
+            answer   = result.get("answer", "").strip()
+            score    = result.get("score", 0.0)
 
         # — Mostrar respuesta —
         st.subheader("💬 Respuesta")
-        if answer and score > 0.05:
+        if answer and score > 0.05 and len(answer) > 3:
             st.success(answer)
             st.caption(f"Confianza del modelo: {score:.0%}")
         else:
-            st.warning(
-                "⚠️ No se encontró una respuesta precisa con la confianza suficiente. "
-                "Intenta reformular la pregunta o añadir más documentos."
-            )
-            # Mostrar fragmento más relevante como referencia
-            st.markdown("**Fragmento más relevante encontrado:**")
-            st.info(results[0][0][:500])
+            st.warning("⚠️ No se encontró respuesta precisa. Mostrando fragmento más relevante:")
+            st.info(results[0][0][:600])
 
         # — Fuentes —
         with st.expander("📄 Ver fragmentos fuente utilizados"):
