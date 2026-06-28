@@ -23,13 +23,12 @@ texts = []  # lista de textos completos
 
 def add_documents(files):
     for f in files:
-        # Support both Streamlit uploaded files (have .read()) and local Path objects
+        # Support both Streamlit uploaded files (have .read) and local Path objects
         if hasattr(f, "read"):
             content = f.read().decode('utf-8')
         else:
-            # Assume f is a pathlib.Path or string path
             content = Path(f).read_text(encoding='utf-8')
-        # dividir en fragmentos simples de 200 palabras
+        # dividir en fragmentos simples de ~1000 caracteres
         chunks = [content[i:i+1000] for i in range(0, len(content), 1000)]
         for chunk in chunks:
             emb = embed_model.encode(chunk)
@@ -56,9 +55,17 @@ if uploaded:
     st.success('Documentos indexados')
 
 if st.button('Cargar datos de ejemplo'):
-    example_dir = Path('sample_data')
-    example_files = [f for f in example_dir.iterdir() if f.suffix in ['.txt', '.md']]
-    add_documents(example_files)
+    # Load the sample files that live in the same directory as this script
+    example_dir = Path(__file__).parent / 'sample_data'
+    for f in example_dir.iterdir():
+        if f.suffix in ['.txt', '.md']:
+            content = f.read_text(encoding='utf-8')
+            # Reuse the same processing logic as uploaded files
+            chunks = [content[i:i+1000] for i in range(0, len(content), 1000)]
+            for chunk in chunks:
+                emb = embed_model.encode(chunk)
+                index.add(np.array([emb]).astype('float32'))
+                texts.append(chunk)
     st.success('Datos de ejemplo cargados')
 query = st.text_input('Pregunta')
 if query and len(texts) > 0:
